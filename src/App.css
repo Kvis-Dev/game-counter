@@ -268,3 +268,12 @@ input[type="checkbox"] {
     background-size: cover;
     background-position: center center;
 }
+.back-btn{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: lawngreen;
+    left: 30px;
+    top:30px;
+}

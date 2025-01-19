@@ -5,12 +5,9 @@ import React from "react";
 import {useLanguage} from "../hooks/hooks";
 
 export function Legend(props: {
-    onFirstShotClick: () => void,
     settings: Settings,
-    onEndOfRackClick: () => void,
-    timeIsRunning: boolean
 }) {
-    const {onFirstShotClick, settings, onEndOfRackClick, timeIsRunning} = props
+    const {settings} = props
     const isTouchDevice = isThisTouchDevice()
     const language = useLanguage(settings.language)
 
@@ -21,18 +18,18 @@ export function Legend(props: {
                 <>
                     <span>
                         <button className="button"
-                                onClick={onFirstShotClick}>
+                                >
                             {language.firstShotBtn.replace("{firstTimeForShot}", settings.firstTimeForShot.toString())}
                         </button>
                     </span>
-                    <span><button className="button" onClick={onEndOfRackClick}>{language.endOfRack}</button></span>
-                    <span>Tap - {timeIsRunning ? language.stopClock : language.startClock }</span>
+                    <span><button className="button" >{language.endOfRack}</button></span>
+                    <span>Tap - { }</span>
                     <span>{language.nextSwipe}</span>
                     <span>{language.tapExtension} </span>
                 </>) : (<>
                 <span>{language.nextPlayer}</span>
                 <span>{language.extension}</span>
-                <span>Space - {timeIsRunning ? language.stopClock : language.startClock }</span>
+                <span>Space - { }</span>
                 <span>
                     1 - {language.firstShotBtn.replace("{firstTimeForShot}", settings.firstTimeForShot.toString())}
                 </span>

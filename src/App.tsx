@@ -5,14 +5,14 @@ import React from 'react';
 import {HashRouter, Route, Routes,} from "react-router-dom";
 import {ToastContainer} from 'react-toastify';
 import {InitScreen} from "./components/InitScreen";
-import {GamePool} from "./components/GamePool";
+import {Game} from "./components/Game";
 
 
 function App() {
     return (<>
             <HashRouter>
                 <Routes>
-                    <Route path="/pool" element={<GamePool/>}/>
+                    <Route path="/pool" element={<Game/>}/>
                     <Route path="/" element={<InitScreen/>}/>
                 </Routes>
             </HashRouter>
