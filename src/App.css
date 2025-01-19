@@ -47,6 +47,7 @@ body {
     height: auto;
     justify-content: space-between;
     flex-direction: column;
+    height: inherit;
 }
 
 .player1 {
@@ -227,15 +228,6 @@ input[type="checkbox"] {
     box-shadow: 0px 0px 5px #7c7676;
 }
 
-.race-to-info {
-    display: block;
-    position: absolute;
-    background-color: #55db55;
-    padding: 10px;
-    border: 1px solid yellow;
-    margin-top: 10%;
-}
-
 .timer-clock {
     position: absolute;
     text-align: center;
@@ -268,12 +260,45 @@ input[type="checkbox"] {
     background-size: cover;
     background-position: center center;
 }
-.back-btn{
+
+.back-btn {
+display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #b5b5b5;
+    left: 30px;
+    top: 30px;
+    line-height: 33px;
+    padding: 2px 0 0 13px;
+    border: 1px solid gray;
+}
+
+.race-to-info {
     display: block;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background: lawngreen;
-    left: 30px;
-    top:30px;
+    background-color: #55db55;
+    padding: 10px;
+    border: 1px solid yellow;
+    width: 200px;
+    text-align: center;
+}
+
+@media (min-width:320px)  {
+    .players{
+        flex-direction: column;
+    }
+    .race-to-info{
+        margin-left: calc(50% - 100px);
+    }
+}
+
+@media (min-width:481px)  {
+    .players{
+        flex-direction: row;
+    }
+
+    .race-to-info {
+        margin-top: 10%;
+    }
 }

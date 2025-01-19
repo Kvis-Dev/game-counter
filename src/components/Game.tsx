@@ -4,10 +4,12 @@ import {isThisTouchDevice} from "../helpers";
 import {useEventListener, useLanguage} from "../hooks/hooks";
 import {useSwipeable} from "react-swipeable";
 import {PlayerInfo} from "./PlayerInfo";
+import {useNavigate} from "react-router-dom";
 
 export function Game() {
     const settings = loadSettings()
     const language = useLanguage(settings.language)
+    const navigate = useNavigate();
 
     const restoredScore = localStorage.getItem("score")
 
@@ -126,10 +128,11 @@ export function Game() {
     });
 
     return (
-        <div className="info-display" onClick={() => {
-        }}>
+        <div className="info-display">
             <div className="players">
-                <div className={'back-btn'}>
+                <div className={'back-btn'}  onClick={() => {
+            navigate('/')
+        }}>
                     &lt;
                 </div>
                 <div {...swipeHandlers0} onClick={() => {

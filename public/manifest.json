@@ -1,6 +1,6 @@
 {
-  "short_name": "Pool clock",
-  "name": "Pool clock",
+  "short_name": "Counter",
+  "name": "Game counter",
   "icons": [
     {
       "src": "favicon.ico",
