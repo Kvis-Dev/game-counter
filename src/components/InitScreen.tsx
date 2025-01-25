@@ -43,6 +43,16 @@ export function InitScreen() {
         navigate('/pool')
     }
 
+    const savedScore = localStorage.getItem("score")
+    let savedScoreSplit  = ['0', '0']
+    let continueAvailable = false
+    if (savedScore){
+        savedScoreSplit = savedScore.split(',')
+        if (savedScoreSplit[0] !== '0' || savedScoreSplit[1] !== '0') {
+            continueAvailable = true
+        }
+    }
+
     return (
         <div>
             <div className={"header"}>
@@ -67,6 +77,13 @@ export function InitScreen() {
                 <div className="start-game">
                     <input className="button" type="submit" value={language.go}/>
                 </div>
+                {continueAvailable && savedScore &&  savedScoreSplit?.length > 1 && (
+                    <div className="start-game">
+                        <input className="button" type='button' onClick={()=> {
+                            navigate('/pool')
+                        }} value={language.continue.replace('{p1}', savedScoreSplit[0]).replace('{p2}', savedScoreSplit[1])}/>
+                    </div>
+                )}
             </form>
 
             <LanguageToggle settings={settings} saveSettings={saveSettings}/>

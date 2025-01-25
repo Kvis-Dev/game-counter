@@ -26,5 +26,6 @@ export const strings  = {
     extensionUnavailable: 'Extension unavailable!',
     extensionApplied: 'Extension applied',
     youCantChangeScore: 'You can\'t change score while time is running!',
-    raceToNum: 'Race to {raceTo}'
+    raceToNum: 'Race to {raceTo}',
+    continue: 'Continue last game ({p1} v {p2})'
 }

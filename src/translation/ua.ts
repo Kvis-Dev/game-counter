@@ -26,5 +26,6 @@ export const strings: KeyValue = {
     extensionUnavailable: 'Продовження недоступне!',
     youCantChangeScore: 'Не можна міняти рахунок, поки йде час!',
     raceToNum: 'Гра до {raceTo} перемог',
-    extensionApplied: 'Продовження застосовано'
+    extensionApplied: 'Продовження застосовано',
+    continue: 'Продовжити останню гру ({p1} v {p2})',
 }
